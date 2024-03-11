@@ -1,20 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_wtf.csrf import  CSRFProtect
+from flask_bcrypt import Bcrypt
+
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
 
-class Jogo:
-    def __init__(self, nome, categoria, console):
-        self.nome = nome
-        self.categoria = categoria
-        self.console = console
+db = SQLAlchemy(app)
+csrf = CSRFProtect(app)
 
-@app.route('/inicio')
-def ola():
-    jogo1 = Jogo('COD', 'Fps', 'CONSOLE')
-    jogo2 = Jogo('Free Fire', 'Fps', 'MOBILE')
-    jogo3 = Jogo('Fifa 24', 'Futebol', 'Console')
+bcrypt = Bcrypt(app)
 
-    lista_jogos = [jogo1, jogo2, jogo3]
-    return render_template('lista.html', titulo='Jogos', jogos=lista_jogos)
+from views_game import *
+from views_user import *
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
