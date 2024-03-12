@@ -31,7 +31,7 @@ A seguir, são fornecidos exemplos visuais das telas principais do JogoTeca:
 1. Clone este repositório em sua máquina local.
 2. Certifique-se de ter o Python e o Flask instalados.
 3. Configure as credenciais do banco de dados no arquivo de configuração correspondente.
-4. Execute o aplicativo Flask utilizando o comando `flask run`.
+4. Execute o jogoteca.py.
 5. Abra o navegador e acesse o endereço indicado pelo Flask.
 
 ## Contribuindo
