@@ -38,6 +38,3 @@ A seguir, são fornecidos exemplos visuais das telas principais do JogoTeca:
 
 Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas encontrados.
 
-## Licença
-
-Este projeto está licenciado sob a MIT License.
